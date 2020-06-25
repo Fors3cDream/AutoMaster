@@ -3,7 +3,7 @@ import pandas as pd
 import re
 from jieba import posseg
 import jieba
-from tokenizer import segment
+from .tokenizer import segment
 import os
 
 
