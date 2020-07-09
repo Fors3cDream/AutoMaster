@@ -246,13 +246,13 @@ def save(pred_labels, ture_labels=None, pred_save_path=None, data_set=None):
 
 def load_word2vec(params):
     """
-    load pretrain word2vec weight matrix
-    :param vocab_size:
+    load pretrain word2vec weight matrix 加载与训练的word2vec 权重矩阵
+    :param vocab_size: 读取词数
     :return:
     """
     word2vec_dict = load_pkl(params['word2vec_output'])
     vocab_dict = open(params['vocab_path'], encoding='utf-8').readlines()
-    embedding_matrix = np.zeros((params['vocab_size'], params['embed_size']))
+    embedding_matrix = np.zeros((params['vocab_size'], params['embed_size'])) # vocab_size, embed_size
 
     for line in vocab_dict[:params['vocab_size']]:
         word_id = line.split()
@@ -260,7 +260,7 @@ def load_word2vec(params):
         embedding_vector = word2vec_dict.get(word)
         if embedding_vector is not None:
             embedding_matrix[int(i)] = embedding_vector
-
+            
     return embedding_matrix
 
 

@@ -26,3 +26,19 @@
 `build_w2v.py`
 
 调用相关函数对`preprocess.py`和`data_reader.py`对训练数据进行预处理后生成的相关文件进行处理，生成词向量并保存到文件。
+
+
+#### 2020-07-09 更新
+添加`seq2seq`模型(基于`tensorflow2`)训练代码。
+
+##### 新增代码功能描述
+
+`seq2seq_tf2/bin/main.py` - 训练模型入口，这里将训练参数整理成了一个配置文件存放到`configs/params_config.py`中，修改训练参数时只需在文件中修改就行，方便训练。
+
+`seq2seq_tf2/encoders/rnn_encoder.py` - 包含`seq2seq`模型中的`Encoder`模块。
+
+`seq2seq_tf2/decoders/rnn_decoder.py` - 包含`seq2seq`模型中的`Decoder`和`Attention`模块。
+
+`seq2seq_tf2/models/sequence_to_sequence.py` - 实现`seq2seq`模型。
+
+`run.py`中添加了训练模型的函数`seq2seq`。

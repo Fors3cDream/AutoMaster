@@ -66,7 +66,7 @@ def build(train_x_seg_path: str, test_y_seg_path: str, test_seg_path: str, out_p
     训练词向量，并保存到文件。
     Params:
         train_x_seg_path - train_x_seg 文件路径
-        train_y_seg_path - train_y_seg 文件路径
+        train_y_seg_path - train_y_seg 文件路径 
         test_x_seg_path - test_x_seg 文件路径
         out_path - 保存训练好的词向量文件的位置
         sentance_path - 保存所有句子的文件的位置
