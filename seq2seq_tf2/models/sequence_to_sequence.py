@@ -43,6 +43,8 @@ class SequenceToSequence(tf.keras.Model):
             """
             _, pred, dec_hidden = self.decoder(dec_inp, dec_hidden, enc_output, context_vector)
             
+            # Teachering Forcing
+            dec_inp = tf.expand_dims(dec_tar[:t], 1)
             
             context_vector, attn_dist = self.attention(dec_hidden, enc_output)
                       
