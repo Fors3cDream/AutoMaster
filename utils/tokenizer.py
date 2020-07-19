@@ -30,15 +30,15 @@ def segment(sentence: str, cut_type: str='word', pos: bool=False) -> list:
                 word_seq.append(w)
                 pos_seq.append(p)
             return word_seq, pos_seq
-        elif cut_type == 'char':
-            word_seq = list(sentence)
+        elif cut_type == 'char': # 按字符分隔
+            word_seq = list(sentence) # 把句子拆分为单个字组成的列表
             pos_seq = []
             for w in word_seq:
                 w_p = posseg.lcut(w)
-                pos_seq.append(w_p[0].flag)
+                pos_seq.append(w_p[0].flag) # 获取对应的词性 pos 
             return word_seq, pos_seq
     else:
-        if cut_type == 'word':
+        if cut_type == 'word': # 按词分隔
             return jieba.lcut(sentence)
         elif cut_type == 'char':
             return list(sentence)

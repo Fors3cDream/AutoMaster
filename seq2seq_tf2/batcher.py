@@ -16,8 +16,9 @@ class Vocab:
         self.count = 4
 
         with open(vocab_file, 'r', encoding='utf-8') as f:
+            # 读取在构建词向量时生成的字典
             for line in f:
-                pieces = line.split()
+                pieces = line.split() # 每次读取一个词和id
                 if len(pieces) != 2:
                     print('Warning : incorrectly formatted line in vocabulary file : %s\n' % line)
                     continue
@@ -199,6 +200,7 @@ def example_generator(vocab, train_x_path, train_y_path, test_x_path, max_enc_le
                 "sample_decoder_pad_mask": sample_decoder_pad_mask,
                 "sample_encoder_pad_mask": sample_encoder_pad_mask,
             }
+            
             yield output
 
     if mode == "test":
@@ -270,7 +272,7 @@ def batch_generator(generator, vocab, train_x_path, train_y_path,
                                                  "sample_decoder_pad_mask": [None],
                                                  "sample_encoder_pad_mask": [None],
                                              })
-
+    
     dataset = dataset.padded_batch(batch_size,
                                    padded_shapes=({"enc_len": [],
                                                    "enc_input": [None],
@@ -314,6 +316,7 @@ def batch_generator(generator, vocab, train_x_path, train_y_path,
                  "sample_decoder_pad_mask": entry["sample_decoder_pad_mask"]})
 
     dataset = dataset.map(update)
+    
     return dataset
 
 

@@ -273,8 +273,8 @@ def get_result_filename(params, commit=''):
     save_result_dir = params['test_save_dir']
     batch_size = params['batch_size']
     epochs = params['epochs']
-    max_length_inp = ['max_dec_len']
-    embedding_dim = ['embed_size']
+    max_length_inp = params['max_dec_len']
+    embedding_dim = params['embed_size']
     now_time = time.strftime('%Y_%m_%d_%H_%M_%S')
     filename = now_time + '_batch_size_{}_epochs_{}_max_length_inp_{}_embedding_dim_{}{}.csv'.format(batch_size, epochs,
                                                                                                      max_length_inp,

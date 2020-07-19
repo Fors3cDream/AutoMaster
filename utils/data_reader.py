@@ -22,7 +22,7 @@ def read_data(path_1: str, path_2: str, path_3: str) -> list:
     Params:
         path_n - 数据源路径。
     Return:
-       包含所有数据源中的词语组成的列表。
+       包含所有数据源中的词语组成的列表，列表每一个元素为分词以后的数据或标签。
     """
     with open(path_1, 'r', encoding='utf-8') as f1, \
             open(path_2, 'r', encoding='utf-8') as f2, \
@@ -69,7 +69,7 @@ def build_vocab(items: list, sort: bool=True, min_count: int=0, lower: bool=Fals
         
         for i, item in enumerate(dic):
             key = item[0]
-            if min_count and min_count > item[1]:
+            if min_count and min_count > item[1]: # 去除出现频次小于min_count的词语
                 continue
             result.append(key)
     else:
@@ -83,8 +83,9 @@ def build_vocab(items: list, sort: bool=True, min_count: int=0, lower: bool=Fals
     vocab = (one line)
     reverse_vocab = (one line)
     """
+    # 构建 (word, index)组成的列表 - 正向 词 - 索引 的词典
     vocab = [(w, i) for i, w in enumerate(result)]
-    # 将词典中的词
+    #构建 (index, word)组成的列表 - 逆向 索引 - 词 的词典
     reverse_vocab = [(w[1], w[0]) for w in vocab]
 
     return vocab, reverse_vocab

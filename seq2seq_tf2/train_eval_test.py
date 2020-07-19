@@ -2,7 +2,7 @@ import tensorflow as tf
 from seq2seq_tf2.models.sequence_to_sequence import SequenceToSequence
 from seq2seq_tf2.batcher import batcher, Vocab
 from seq2seq_tf2.train_helper import train_model
-#from seq2seq_tf2.test_helper import beam_decode, greedy_decode
+from seq2seq_tf2.test_helper import beam_decode, greedy_decode
 from tqdm import tqdm
 from utils.data_utils import get_result_filename
 import pandas as pd
@@ -14,6 +14,7 @@ import pprint
 def train(params):
     assert params["mode"].lower() == "train", "change training mode to 'train'"
 
+    # 构建训练时使用的字典，包含了 {UNKNOWN_TOKEN: 0, PAD_TOKEN: 1, START_DECODING: 2, STOP_DECODING: 3} 和它的逆序
     vocab = Vocab(params["vocab_path"], params["vocab_size"])
     print('true vocab is ', vocab)
 
@@ -65,6 +66,8 @@ def test(params):
     if params['greedy_decode']:
         # params['batch_size'] = 512
         predict_result(model, params, vocab, params['test_save_dir'])
+    else:
+        predict_result_beam(model, params, vocab, params['test_save_dir'])
 
 
 def predict_result(model, params, vocab, result_save_path):
@@ -73,12 +76,31 @@ def predict_result(model, params, vocab, result_save_path):
     results = greedy_decode(model, dataset, vocab, params)
     results = list(map(lambda x: x.replace(" ",""), results))
     # 保存结果
-    save_predict_result(results, params)
+    save_predict_result(results, params, 'greedy_decode')
+
+    return results
+
+def predict_result_beam(model, params, vocab, result_save_path):
+    dataset = batcher(vocab, params)
+    # 预测结果
+    batch_size = params["batch_size"]
+    results = []
+
+    sample_size = 20000
+    # batch 操作轮数 math.ceil向上取整 小数 +1
+    # 因为最后一个batch可能不足一个batch size 大小 ,但是依然需要计算
+    steps_epoch = sample_size // batch_size + 1
+    
+    for _ in tqdm(range(steps_epoch)):
+        enc_data = next(iter(dataset))
+        results += beam_decode(model, enc_data, vocab, params)
+    # 保存结果
+    save_predict_result(results, params, 'beam_decode')
 
     return results
 
 
-def save_predict_result(results, params):
+def save_predict_result(results, params, mode):
     # 读取结果
     test_df = pd.read_csv(params['test_x_dir'])
     # 填充结果
@@ -86,7 +108,7 @@ def save_predict_result(results, params):
     # 　提取ID和预测结果两列
     test_df = test_df[['QID', 'Prediction']]
     # 保存结果.
-    result_save_path = get_result_filename(params)
+    result_save_path = get_result_filename(params).replace(".csv", "_"+mode+".csv")
     test_df.to_csv(result_save_path, index=None, sep=',')
 
 

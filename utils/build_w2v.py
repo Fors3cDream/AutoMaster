@@ -61,20 +61,24 @@ def save_sentence(lines: list, sentence_path: str):
 
 
 def build(train_x_seg_path: str, test_y_seg_path: str, test_seg_path: str, out_path: str=None, sentence_path: str='',
-          w2v_bin_path: str="w2v.bin", min_count: int=1):
+          w2v_bin_path: str="w2v.bin", min_count: int=1, embedding_dim: int=256):
     """
     训练词向量，并保存到文件。
     Params:
-        train_x_seg_path - train_x_seg 文件路径
-        train_y_seg_path - train_y_seg 文件路径 
-        test_x_seg_path - test_x_seg 文件路径
+        train_x_seg_path - train_x_seg 文件路径 - 训练集
+        train_y_seg_path - train_y_seg 文件路径 - 训练标签
+        test_x_seg_path - test_x_seg 文件路径 - 测试集
         out_path - 保存训练好的词向量文件的位置
         sentance_path - 保存所有句子的文件的位置
         w2v_bin_path - 保存词向量2进制文件的名称
         min_count - 词最小个数
     """
-    sentences = extract_sentence(train_x_seg_path, test_y_seg_path, test_seg_path)
+    # 将分割好的训练数据、训练标签、测试数据整合为一个文件，文件中的一行由分割好的数据或者标签组成
+    print("Merge data label to one file!(include all cut sequences)")
+    sentences = extract_sentence(train_x_seg_path, test_y_seg_path, test_seg_path) 
     save_sentence(sentences, sentence_path)
+    
+    
     print('train w2v model...')
     # train model
     """
@@ -82,7 +86,7 @@ def build(train_x_seg_path: str, test_y_seg_path: str, test_seg_path: str, out_p
     your code
     w2v = （one line）
     """
-    w2v = Word2Vec(sentences=LineSentence(sentence_path), size=256, min_count=min_count, workers=8, sg=1, iter=50)
+    w2v = Word2Vec(sentences=LineSentence(sentence_path), size=embedding_dim, min_count=min_count, workers=8, sg=1, iter=50)
     w2v.wv.save_word2vec_format(w2v_bin_path, binary=True)
     print("save %s ok." % w2v_bin_path)
     # test

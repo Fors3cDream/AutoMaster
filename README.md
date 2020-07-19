@@ -42,3 +42,9 @@
 `seq2seq_tf2/models/sequence_to_sequence.py` - 实现`seq2seq`模型。
 
 `run.py`中添加了训练模型的函数`seq2seq`。
+
+#### 2020-07-18更新
+
+添加`seq2seq_tf2/test_helper.py`文件。
+
+实现`greedy_decode`函数功能。生成摘要数据是通过贪婪搜索取概率最大值的词。

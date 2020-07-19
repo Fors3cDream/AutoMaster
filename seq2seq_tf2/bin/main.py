@@ -8,7 +8,7 @@ import pathlib
 
 from configs.params_config import seq2seq_params
 
-NUM_SAMPLES = 82706
+NUM_SAMPLES = 82874 # 训练样本数量
 
 # 获取项目根目录
 # root = pathlib.Path(os.path.abspath(__file__)).parent.parent
@@ -81,7 +81,8 @@ def main():
         tf.config.experimental.set_visible_devices(devices=gpus[0], device_type='GPU')
 
     if params["mode"] == "train":
-        params["steps_per_epoch"] = NUM_SAMPLES//params["batch_size"]
+        print("train model!!")
+        params["steps_per_epoch"] = NUM_SAMPLES//params["batch_size"] # 每轮最多训练次数
         train(params)
     
     elif params["mode"] == "eval":

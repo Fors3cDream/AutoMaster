@@ -43,11 +43,12 @@ def remove_words(words_list: list) -> list:
 
 def parse_data(train_path: str, test_path: str):
     """
-    处理训练数据和测试数据。
+    处理训练数据和测试数据，将分词处理后的数据（包含训练数据和测试数据）、标签分别存放到文件中。
     Params:
         train_path - 训练数据文件路径
         test_path - 测试数据文件路径
     """
+    print("读取数据并进行预处理（）")
     # 读取训练数据
     train_df = pd.read_csv(train_path, encoding='utf-8')
     # 丢弃 Report 中为空的数据，直接替换原data frame

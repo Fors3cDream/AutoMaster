@@ -1,0 +1,326 @@
+2020-07-18 15:21:52.229533: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce RTX 2080 with Max-Q Design, Compute Capability 7.5
+Building the model ...
+Creating the checkpoint manager
+Initializing from scratch.
+Starting the training ...
+2020-07-18 15:21:52.928520: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cudnn64_7.dll
+2020-07-18 15:21:54.094187: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library cublas64_10.dll
+Epoch 1 Batch 100 Loss 7.0937
+Epoch 1 Batch 200 Loss 6.8424
+Epoch 1 Batch 300 Loss 6.7406
+Epoch 1 Batch 400 Loss 6.6632
+Epoch 1 Batch 500 Loss 6.6001
+Epoch 1 Batch 600 Loss 6.5668
+Epoch 1 Batch 700 Loss 6.5380
+Epoch 1 Batch 800 Loss 6.5094
+Epoch 1 Batch 900 Loss 6.4856
+Epoch 1 Batch 1000 Loss 6.4647
+Epoch 1 Batch 1100 Loss 6.4403
+Epoch 1 Batch 1200 Loss 6.4057
+Saving checkpoint for epoch 1 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-1 ,best loss 6.3763041496276855
+Epoch 1 Loss 6.3763
+Time taken for 1 epoch 658.6991763114929 sec
+
+Epoch 2 Batch 100 Loss 5.8925
+Epoch 2 Batch 200 Loss 5.8363
+Epoch 2 Batch 300 Loss 5.7940
+Epoch 2 Batch 400 Loss 5.7607
+Epoch 2 Batch 500 Loss 5.7198
+Epoch 2 Batch 600 Loss 5.6949
+Epoch 2 Batch 700 Loss 5.6635
+Epoch 2 Batch 800 Loss 5.6244
+Epoch 2 Batch 900 Loss 5.5911
+Epoch 2 Batch 1000 Loss 5.5562
+Epoch 2 Batch 1100 Loss 5.5172
+Epoch 2 Batch 1200 Loss 5.4682
+Saving checkpoint for epoch 2 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-2 ,best loss 5.424019813537598
+Epoch 2 Loss 5.4240
+Time taken for 1 epoch 659.5519027709961 sec
+
+Epoch 3 Batch 100 Loss 4.8763
+Epoch 3 Batch 200 Loss 4.8015
+Epoch 3 Batch 300 Loss 4.7599
+Epoch 3 Batch 400 Loss 4.7224
+Epoch 3 Batch 500 Loss 4.6825
+Epoch 3 Batch 600 Loss 4.6574
+Epoch 3 Batch 700 Loss 4.6348
+Epoch 3 Batch 800 Loss 4.6057
+Epoch 3 Batch 900 Loss 4.5866
+Epoch 3 Batch 1000 Loss 4.5663
+Epoch 3 Batch 1100 Loss 4.5476
+Epoch 3 Batch 1200 Loss 4.5193
+Saving checkpoint for epoch 3 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-3 ,best loss 4.494338512420654
+Epoch 3 Loss 4.4943
+Time taken for 1 epoch 691.1167941093445 sec
+
+Epoch 4 Batch 100 Loss 4.1720
+Epoch 4 Batch 200 Loss 4.1141
+Epoch 4 Batch 300 Loss 4.0930
+Epoch 4 Batch 400 Loss 4.0751
+Epoch 4 Batch 500 Loss 4.0544
+Epoch 4 Batch 600 Loss 4.0423
+Epoch 4 Batch 700 Loss 4.0319
+Epoch 4 Batch 800 Loss 4.0171
+Epoch 4 Batch 900 Loss 4.0102
+Epoch 4 Batch 1000 Loss 4.0005
+Epoch 4 Batch 1100 Loss 3.9940
+Epoch 4 Batch 1200 Loss 3.9759
+Saving checkpoint for epoch 4 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-4 ,best loss 3.959242105484009
+Epoch 4 Loss 3.9592
+Time taken for 1 epoch 673.324060678482 sec
+
+Epoch 5 Batch 100 Loss 3.7015
+Epoch 5 Batch 200 Loss 3.6518
+Epoch 5 Batch 300 Loss 3.6399
+Epoch 5 Batch 400 Loss 3.6333
+Epoch 5 Batch 500 Loss 3.6251
+Epoch 5 Batch 600 Loss 3.6199
+Epoch 5 Batch 700 Loss 3.6158
+Epoch 5 Batch 800 Loss 3.6086
+Epoch 5 Batch 900 Loss 3.6077
+Epoch 5 Batch 1000 Loss 3.6032
+Epoch 5 Batch 1100 Loss 3.6031
+Epoch 5 Batch 1200 Loss 3.5893
+Saving checkpoint for epoch 5 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-5 ,best loss 3.5757691860198975
+Epoch 5 Loss 3.5758
+Time taken for 1 epoch 657.9870822429657 sec
+
+Epoch 6 Batch 100 Loss 3.3277
+Epoch 6 Batch 200 Loss 3.2869
+Epoch 6 Batch 300 Loss 3.2855
+Epoch 6 Batch 400 Loss 3.2876
+Epoch 6 Batch 500 Loss 3.2883
+Epoch 6 Batch 600 Loss 3.2867
+Epoch 6 Batch 700 Loss 3.2871
+Epoch 6 Batch 800 Loss 3.2847
+Epoch 6 Batch 900 Loss 3.2874
+Epoch 6 Batch 1000 Loss 3.2865
+Epoch 6 Batch 1100 Loss 3.2907
+Epoch 6 Batch 1200 Loss 3.2793
+Saving checkpoint for epoch 6 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-6 ,best loss 3.267906904220581
+Epoch 6 Loss 3.2679
+Time taken for 1 epoch 684.2153539657593 sec
+
+Epoch 7 Batch 100 Loss 3.0515
+Epoch 7 Batch 200 Loss 3.0135
+Epoch 7 Batch 300 Loss 3.0183
+Epoch 7 Batch 400 Loss 3.0236
+Epoch 7 Batch 500 Loss 3.0287
+Epoch 7 Batch 600 Loss 3.0271
+Epoch 7 Batch 700 Loss 3.0297
+Epoch 7 Batch 800 Loss 3.0287
+Epoch 7 Batch 900 Loss 3.0325
+Epoch 7 Batch 1000 Loss 3.0331
+Epoch 7 Batch 1100 Loss 3.0398
+Epoch 7 Batch 1200 Loss 3.0302
+Saving checkpoint for epoch 7 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-7 ,best loss 3.020022392272949
+Epoch 7 Loss 3.0200
+Time taken for 1 epoch 686.6129491329193 sec
+
+Epoch 8 Batch 100 Loss 2.8419
+Epoch 8 Batch 200 Loss 2.8047
+Epoch 8 Batch 300 Loss 2.8109
+Epoch 8 Batch 400 Loss 2.8154
+Epoch 8 Batch 500 Loss 2.8204
+Epoch 8 Batch 600 Loss 2.8182
+Epoch 8 Batch 700 Loss 2.8218
+Epoch 8 Batch 800 Loss 2.8217
+Epoch 8 Batch 900 Loss 2.8267
+Epoch 8 Batch 1000 Loss 2.8275
+Epoch 8 Batch 1100 Loss 2.8357
+Epoch 8 Batch 1200 Loss 2.8269
+Saving checkpoint for epoch 8 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-8 ,best loss 2.8177073001861572
+Epoch 8 Loss 2.8177
+Time taken for 1 epoch 663.0275995731354 sec
+
+Epoch 9 Batch 100 Loss 2.6459
+Epoch 9 Batch 200 Loss 2.6144
+Epoch 9 Batch 300 Loss 2.6247
+Epoch 9 Batch 400 Loss 2.6322
+Epoch 9 Batch 500 Loss 2.6380
+Epoch 9 Batch 600 Loss 2.6348
+Epoch 9 Batch 700 Loss 2.6388
+Epoch 9 Batch 800 Loss 2.6393
+Epoch 9 Batch 900 Loss 2.6463
+Epoch 9 Batch 1000 Loss 2.6481
+Epoch 9 Batch 1100 Loss 2.6583
+Epoch 9 Batch 1200 Loss 2.6502
+Saving checkpoint for epoch 9 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-9 ,best loss 2.6425490379333496
+Epoch 9 Loss 2.6425
+Time taken for 1 epoch 668.1499693393707 sec
+
+Epoch 10 Batch 100 Loss 2.4778
+Epoch 10 Batch 200 Loss 2.4545
+Epoch 10 Batch 300 Loss 2.4642
+Epoch 10 Batch 400 Loss 2.4746
+Epoch 10 Batch 500 Loss 2.4833
+Epoch 10 Batch 600 Loss 2.4819
+Epoch 10 Batch 700 Loss 2.4853
+Epoch 10 Batch 800 Loss 2.4850
+Epoch 10 Batch 900 Loss 2.4908
+Epoch 10 Batch 1000 Loss 2.4929
+Epoch 10 Batch 1100 Loss 2.5036
+Epoch 10 Batch 1200 Loss 2.4954
+Saving checkpoint for epoch 10 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-10 ,best loss 2.4881250858306885
+Epoch 10 Loss 2.4881
+Time taken for 1 epoch 656.964784860611 sec
+
+Epoch 11 Batch 100 Loss 2.3315
+Epoch 11 Batch 200 Loss 2.3082
+Epoch 11 Batch 300 Loss 2.3206
+Epoch 11 Batch 400 Loss 2.3351
+Epoch 11 Batch 500 Loss 2.3458
+Epoch 11 Batch 600 Loss 2.3444
+Epoch 11 Batch 700 Loss 2.3472
+Epoch 11 Batch 800 Loss 2.3483
+Epoch 11 Batch 900 Loss 2.3539
+Epoch 11 Batch 1000 Loss 2.3567
+Epoch 11 Batch 1100 Loss 2.3682
+Epoch 11 Batch 1200 Loss 2.3599
+Saving checkpoint for epoch 11 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-11 ,best loss 2.3518993854522705
+Epoch 11 Loss 2.3519
+Time taken for 1 epoch 659.6825470924377 sec
+
+Epoch 12 Batch 100 Loss 2.2029
+Epoch 12 Batch 200 Loss 2.1785
+Epoch 12 Batch 300 Loss 2.1922
+Epoch 12 Batch 400 Loss 2.2078
+Epoch 12 Batch 500 Loss 2.2177
+Epoch 12 Batch 600 Loss 2.2169
+Epoch 12 Batch 700 Loss 2.2204
+Epoch 12 Batch 800 Loss 2.2215
+Epoch 12 Batch 900 Loss 2.2271
+Epoch 12 Batch 1000 Loss 2.2317
+Epoch 12 Batch 1100 Loss 2.2440
+Epoch 12 Batch 1200 Loss 2.2363
+Saving checkpoint for epoch 12 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-12 ,best loss 2.2286369800567627
+Epoch 12 Loss 2.2286
+Time taken for 1 epoch 659.936844587326 sec
+
+Epoch 13 Batch 100 Loss 2.0935
+Epoch 13 Batch 200 Loss 2.0753
+Epoch 13 Batch 300 Loss 2.0896
+Epoch 13 Batch 400 Loss 2.1055
+Epoch 13 Batch 500 Loss 2.1151
+Epoch 13 Batch 600 Loss 2.1128
+Epoch 13 Batch 700 Loss 2.1163
+Epoch 13 Batch 800 Loss 2.1173
+Epoch 13 Batch 900 Loss 2.1233
+Epoch 13 Batch 1000 Loss 2.1292
+Epoch 13 Batch 1100 Loss 2.1421
+Epoch 13 Batch 1200 Loss 2.1348
+Saving checkpoint for epoch 13 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-13 ,best loss 2.1265575885772705
+Epoch 13 Loss 2.1266
+Time taken for 1 epoch 655.9724698066711 sec
+
+Epoch 14 Batch 100 Loss 2.0099
+Epoch 14 Batch 200 Loss 1.9826
+Epoch 14 Batch 300 Loss 1.9978
+Epoch 14 Batch 400 Loss 2.0122
+Epoch 14 Batch 500 Loss 2.0198
+Epoch 14 Batch 600 Loss 2.0161
+Epoch 14 Batch 700 Loss 2.0203
+Epoch 14 Batch 800 Loss 2.0203
+Epoch 14 Batch 900 Loss 2.0262
+Epoch 14 Batch 1000 Loss 2.0328
+Epoch 14 Batch 1100 Loss 2.0461
+Epoch 14 Batch 1200 Loss 2.0397
+Saving checkpoint for epoch 14 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-14 ,best loss 2.0311968326568604
+Epoch 14 Loss 2.0312
+Time taken for 1 epoch 661.5015683174133 sec
+
+Epoch 15 Batch 100 Loss 1.9163
+Epoch 15 Batch 200 Loss 1.8919
+Epoch 15 Batch 300 Loss 1.9075
+Epoch 15 Batch 400 Loss 1.9228
+Epoch 15 Batch 500 Loss 1.9315
+Epoch 15 Batch 600 Loss 1.9298
+Epoch 15 Batch 700 Loss 1.9360
+Epoch 15 Batch 800 Loss 1.9351
+Epoch 15 Batch 900 Loss 1.9411
+Epoch 15 Batch 1000 Loss 1.9470
+Epoch 15 Batch 1100 Loss 1.9609
+Epoch 15 Batch 1200 Loss 1.9540
+Saving checkpoint for epoch 15 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-15 ,best loss 1.94532310962677
+Epoch 15 Loss 1.9453
+Time taken for 1 epoch 672.3865540027618 sec
+
+Epoch 16 Batch 100 Loss 1.8282
+Epoch 16 Batch 200 Loss 1.8074
+Epoch 16 Batch 300 Loss 1.8228
+Epoch 16 Batch 400 Loss 1.8396
+Epoch 16 Batch 500 Loss 1.8478
+Epoch 16 Batch 600 Loss 1.8476
+Epoch 16 Batch 700 Loss 1.8545
+Epoch 16 Batch 800 Loss 1.8549
+Epoch 16 Batch 900 Loss 1.8626
+Epoch 16 Batch 1000 Loss 1.8703
+Epoch 16 Batch 1100 Loss 1.8846
+Epoch 16 Batch 1200 Loss 1.8786
+Saving checkpoint for epoch 16 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-16 ,best loss 1.870240569114685
+Epoch 16 Loss 1.8702
+Time taken for 1 epoch 679.4387056827545 sec
+
+Epoch 17 Batch 100 Loss 1.7545
+Epoch 17 Batch 200 Loss 1.7350
+Epoch 17 Batch 300 Loss 1.7495
+Epoch 17 Batch 400 Loss 1.7665
+Epoch 17 Batch 500 Loss 1.7752
+Epoch 17 Batch 600 Loss 1.7822
+Epoch 17 Batch 700 Loss 1.7915
+Epoch 17 Batch 800 Loss 1.7930
+Epoch 17 Batch 900 Loss 1.8007
+Epoch 17 Batch 1000 Loss 1.8070
+Epoch 17 Batch 1100 Loss 1.8209
+Epoch 17 Batch 1200 Loss 1.8151
+Saving checkpoint for epoch 17 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-17 ,best loss 1.8068598508834839
+Epoch 17 Loss 1.8069
+Time taken for 1 epoch 666.5182635784149 sec
+
+Epoch 18 Batch 100 Loss 1.6980
+Epoch 18 Batch 200 Loss 1.6779
+Epoch 18 Batch 300 Loss 1.6916
+Epoch 18 Batch 400 Loss 1.7076
+Epoch 18 Batch 500 Loss 1.7139
+Epoch 18 Batch 600 Loss 1.7113
+Epoch 18 Batch 700 Loss 1.7142
+Epoch 18 Batch 800 Loss 1.7130
+Epoch 18 Batch 900 Loss 1.7194
+Epoch 18 Batch 1000 Loss 1.7255
+Epoch 18 Batch 1100 Loss 1.7401
+Epoch 18 Batch 1200 Loss 1.7348
+Saving checkpoint for epoch 18 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-18 ,best loss 1.727031946182251
+Epoch 18 Loss 1.7270
+Time taken for 1 epoch 681.3964700698853 sec
+
+Epoch 19 Batch 100 Loss 1.6209
+Epoch 19 Batch 200 Loss 1.5977
+Epoch 19 Batch 300 Loss 1.6148
+Epoch 19 Batch 400 Loss 1.6348
+Epoch 19 Batch 500 Loss 1.6428
+Epoch 19 Batch 600 Loss 1.6387
+Epoch 19 Batch 700 Loss 1.6413
+Epoch 19 Batch 800 Loss 1.6406
+Epoch 19 Batch 900 Loss 1.6476
+Epoch 19 Batch 1000 Loss 1.6548
+Epoch 19 Batch 1100 Loss 1.6708
+Epoch 19 Batch 1200 Loss 1.6672
+Saving checkpoint for epoch 19 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-19 ,best loss 1.660338282585144
+Epoch 19 Loss 1.6603
+Time taken for 1 epoch 656.235755443573 sec
+
+Epoch 20 Batch 100 Loss 1.5677
+Epoch 20 Batch 200 Loss 1.5462
+Epoch 20 Batch 300 Loss 1.5648
+Epoch 20 Batch 400 Loss 1.5865
+Epoch 20 Batch 500 Loss 1.5949
+Epoch 20 Batch 600 Loss 1.5909
+Epoch 20 Batch 700 Loss 1.5932
+Epoch 20 Batch 800 Loss 1.5932
+Epoch 20 Batch 900 Loss 1.6001
+Epoch 20 Batch 1000 Loss 1.6076
+Epoch 20 Batch 1100 Loss 1.6236
+Epoch 20 Batch 1200 Loss 1.6198
+Saving checkpoint for epoch 20 at E:\playground\Python\AIs\HCIT\NLP\nlp-project\homework\AutoMaster/ckpt/seq2seq/checkpoint\ckpt-20 ,best loss 1.612385630607605      
+Epoch 20 Loss 1.6124
+Time taken for 1 epoch 653.4971024990082 sec

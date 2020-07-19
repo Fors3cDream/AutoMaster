@@ -28,6 +28,10 @@ class BahdanauAttention(tf.keras.layers.Layer):
         定义score
         your code
         """
+        # print("enc_output shape: {}".format(enc_output.shape)) # (batch_size, max_enc_len, enc_untis)
+        
+        # print("hidden_with_time_axis shape: {}".format(hidden_with_time_axis.shape)) # (256, 1, 512)
+        
         score = self.V(tf.nn.tanh(self.W1(enc_output) + self.W2(hidden_with_time_axis)))
         # Calculate attention distribution
         """
@@ -39,6 +43,7 @@ class BahdanauAttention(tf.keras.layers.Layer):
         # context_vector shape after sum == (batch_size, hidden_size)
         context_vector = attn_dist * enc_output  # shape=(16, 200, 256)
         context_vector = tf.reduce_sum(context_vector, axis=1)  # shape=(16, 256)
+         
         return context_vector, tf.squeeze(attn_dist, -1)
 
 
@@ -51,7 +56,7 @@ class Decoder(tf.keras.layers.Layer):
         定义Embedding层，加载预训练的词向量
         your code
         """
-        self.embedding = tf.keras.layers.Embedding(vocab_size, embedding_dim, weights=[embedding_matrix], trainable=False)
+        self.embedding = tf.keras.layers.Embedding(input_dim=vocab_size, output_dim=embedding_dim, weights=[embedding_matrix], trainable=False)
         
         """
         定义单向的RNN、GRU、LSTM层
@@ -63,18 +68,17 @@ class Decoder(tf.keras.layers.Layer):
         定义最后的fc层，用于预测词的概率
         your code
         """
-        self.fc = tf.keras.layers.Dense(vocab_size)
+        self.fc = tf.keras.layers.Dense(vocab_size, activation=tf.keras.activations.softmax)
 
     def call(self, x, hidden, enc_output, context_vector):
         # enc_output shape == (batch_size, max_length, hidden_size)
 
         # x shape after passing through embedding == (batch_size, 1, embedding_dim)
-        x = self.embedding(x) # (batch_size, max_dec_len, embedding_dim)
-        # print('x is ', x)
 
+        x = self.embedding(x) # (batch_size, max_dec_len, embedding_dim)
         # x shape after concatenation == (batch_size, 1, embedding_dim + hidden_size)
         x = tf.concat([tf.expand_dims(context_vector, 1), x], axis=-1)
-
+        
         # passing the concatenated vector to the GRU
         output, state = self.gru(x)
         # output shape == (batch_size * 1, hidden_size)
